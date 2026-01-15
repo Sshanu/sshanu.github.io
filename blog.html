@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Blog - Shanu Kumar</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body data-page="blog">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <section class="section">
+      <h2>Blog</h2>
+      <div class="kicker">Notes on VLMs, layerwise analysis, robustness, and practical experiments.</div>
+
+      <div class="card" id="blog-list"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    const blogPosts = [
+      {
+        title: "A Dummy Post: Reading VLMs Layer-by-Layer",
+        date: "Jan 2026",
+        excerpt: "A placeholder post. Replace this with your real content when ready.",
+        file: "blog/dummy-post.html"
+      }
+    ];
+
+    function renderBlog() {
+      const root = document.getElementById("blog-list");
+      if (!blogPosts.length) {
+        root.innerHTML = "<div class='kicker'>No posts yet.</div>";
+        return;
+      }
+
+      root.innerHTML = blogPosts.map(p => `
+        <div style="padding:14px 6px; border-bottom:1px solid var(--border);">
+          <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+            <a href="${p.file}" style="font-weight:850; color:var(--text); text-decoration:none;">${p.title}</a>
+            <div style="color:var(--muted2);">${p.date}</div>
+          </div>
+          <div style="margin-top:8px; color:var(--muted);">${p.excerpt}</div>
+          <div style="margin-top:10px;"><a href="${p.file}">Read →</a></div>
+        </div>
+      `).join("");
+    }
+
+    document.addEventListener("DOMContentLoaded", renderBlog);
+  </script>
+</body>
+</html>

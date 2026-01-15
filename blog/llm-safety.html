@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Safety Mechanisms in Large Language Models · Shanu Kumar</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.75;
+      color: #2d3748;
+      background: #ffffff;
+      font-size: 16px;
+    }
+
+    a {
+      color: #2c5282;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #1a365d;
+      text-decoration: underline;
+    }
+
+    /* Navigation (top-right icon nav) */
+    nav {
+      background: #f8f9fa;
+      border-bottom: 2px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      color: #4a5568;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+      background: transparent;
+    }
+
+    .nav-icon:hover,
+    .nav-icon.active {
+      color: #2c5282;
+      background: #ffffff;
+      border-color: #e2e8f0;
+      text-decoration: none;
+    }
+
+    .nav-icon i { font-size: 16px; }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 30px;
+    }
+
+    .post-header {
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #1a202c;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 600;
+      color: #1a202c;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      color: #718096;
+      font-size: 14px;
+    }
+
+    .content p {
+      margin: 16px 0;
+      color: #2d3748;
+    }
+
+    .content h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #1a202c;
+    }
+
+    .callout {
+      margin: 18px 0;
+      padding: 16px 18px;
+      background: #f7fafc;
+      border-left: 4px solid #2c5282;
+      color: #4a5568;
+    }
+
+    code {
+      background: #f7fafc;
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.95em;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      color: #718096;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav .nav-inner { justify-content: center; }
+      .container { padding: 40px 20px; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-icon" href="../index.html" title="Home" aria-label="Home"><i class="fa-solid fa-house"></i></a>
+      <a class="nav-icon active" href="../blog.html" title="Blog" aria-label="Blog"><i class="fa-regular fa-pen-to-square"></i></a>
+      <a class="nav-icon" href="../photography.html" title="Photography" aria-label="Photography"><i class="fa-solid fa-camera"></i></a>
+      <a class="nav-icon" href="../misc.html" title="Talks / Teaching / Service" aria-label="Talks / Teaching / Service"><i class="fa-solid fa-list-check"></i></a>
+    </div>
+  </nav>
+
+  <article class="container">
+    <div class="post-header">
+      <h1>Understanding Safety Mechanisms in Large Language Models</h1>
+      <div class="meta">January 10, 2025 · Tags: #safety #llm</div>
+    </div>
+
+    <div class="content">
+      <p>
+        This is a dummy post template. Replace this text with your real content.
+        The idea is to keep blog posts clean, readable, and consistent with the main website.
+      </p>
+
+      <div class="callout">
+        <strong>Note:</strong> GitHub Pages can’t automatically “list files in a folder” from the browser.
+        The blog index page should maintain a list (like your <code>blogPosts</code> array), or load a JSON file you update.
+      </div>
+
+      <h2>1. What we mean by “safety”</h2>
+      <p>
+        Safety can include harmful content avoidance, privacy concerns, jailbreak robustness,
+        policy compliance, and minimizing hallucinations in high-stakes settings.
+      </p>
+
+      <h2>2. Common alignment approaches</h2>
+      <p>
+        A few common approaches include supervised fine-tuning, preference optimization,
+        and rule-based scaffolding. You can add equations, figures, or code snippets here.
+      </p>
+
+      <h2>3. Practical evaluation notes</h2>
+      <p>
+        In practice, you’ll want to evaluate over diverse prompts, adversarial conditions,
+        and real user distributions—then monitor drift after deployment.
+      </p>
+
+      <p>
+        <a href="../blog.html">← Back to Blog</a>
+      </p>
+    </div>
+  </article>
+
+  <footer>
+    <p>© 2025 Shanu Kumar · <a href="../index.html">Home</a></p>
+  </footer>
+
+</body>
+</html>
