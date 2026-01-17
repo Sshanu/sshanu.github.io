@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,78 +7,453 @@
   <title>Shanu Kumar</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body data-page="about">
-  <div id="site-header"></div>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brandblock">
+        <div class="name">Shanu Kumar</div>
+        <div class="tagline">PhD @ Mohamed bin Zayed University of Artificial Intelligence</div>
+      </div>
 
+      <div class="contact-icons">
+        <a href="mailto:shanu.kumar@mbzuai.ac.ae" class="icon-btn" title="Email" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a href="https://scholar.google.com/citations?user=PR_Xi0EAAAAJ&hl=en"
+           class="icon-btn" title="Google Scholar" aria-label="Google Scholar"
+           target="_blank" rel="noopener">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+
+        <a href="https://github.com/Sshanu"
+           class="icon-btn" title="GitHub" aria-label="GitHub"
+           target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/shanu-kumar"
+           class="icon-btn" title="LinkedIn" aria-label="LinkedIn"
+           target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://twitter.com/Sshanukr"
+           class="icon-btn" title="Twitter/X" aria-label="Twitter/X"
+           target="_blank" rel="noopener">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <!-- FIXED: solid icon + requested path -->
+        <a href="curriculum_vitae.pdf" class="cv-btn" title="CV" aria-label="CV">CV</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
   <main class="container">
-    <section class="hero">
-      <div class="hero-grid">
-        <img class="profile-photo" src="images/profile_pic.jpg" alt="Shanu Kumar">
+    <!-- Intro -->
+    <section class="intro">
+      <div class="intro-header">
+        <img
+          src="images/profile_pic.jpg"
+          alt="Shanu Kumar"
+          class="profile-img"
+          onerror="this.onerror=null;this.src='images/paper_default.png';"
+        >
 
-        <div>
-          <div class="h-title">Shanu Kumar</div>
-          <div class="h-sub">PhD Student · Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</div>
+        <div class="intro-text">
+          <h1>About Me</h1>
 
-          <div class="prose" style="margin-top:12px;">
+          <!-- Intro / About Me -->
+          <div class="bio">
             <p>
-              I am a PhD student at MBZUAI. My research focuses on reliable and efficient language technologies for real-world
-              deployment, with emphasis on domain adaptation, robust and uncertainty-aware learning, and safety for large language models.
-              I received my B.Tech. in Electrical Engineering (Minor: Machine Learning) from IIT Kanpur. I am fortunate to be advised by
-              <a href="https://mbzuai.ac.ae/study/faculty/yova-kementchedjhieva/" target="_blank" rel="noreferrer">Yova Kementchedjhieva</a>
+              I am a PhD student at <b>Mohamed bin Zayed University of Artificial Intelligence</b>. I am fortunate to be advised by
+              <a href="https://mbzuai.ac.ae/study/faculty/yova-kementchedjhieva/" target="_blank" rel="noopener"><b>Yova Kementchedjhieva</b></a>
               and
-              <a href="https://mbzuai.ac.ae/study/faculty/kentaro-inui/" target="_blank" rel="noreferrer">Kentaro Inui</a>.
+              <a href="https://mbzuai.ac.ae/study/faculty/kentaro-inui/" target="_blank" rel="noopener"><b>Kentaro Inui</b></a>.
+              My research focuses on personalization, alignment, spatial reasoning, and interpretability in <b>vision–language models</b>, with an emphasis on building systems that are reliable in real-world settings.
             </p>
-          </div>
 
-          <div class="pills">
-            <a class="pill" href="curriculum_vitae_2025.pdf"><i class="fa-regular fa-file-lines"></i>CV</a>
-            <a class="pill" href="publications.html"><i class="fa-regular fa-newspaper"></i>Publications</a>
-            <a class="pill" href="misc.html"><i class="fa-solid fa-list-check"></i>Talks / Teaching / Service</a>
+            <p>
+              Previously, I was a <b>Data &amp; Applied Scientist</b> at <b>Microsoft</b> (2019–2025), working on <b>multilingual NLP</b> and <b>safety-focused modeling</b> at scale.
+              I completed my <b>B.Tech.</b> in Electrical Engineering with a minor in Machine Learning at <b>IIT Kanpur</b>, where I was awarded the <b>Silver Medal</b>.
+              Outside research, I’m usually trekking or doing photography, occasionally pretending I’m “collecting data” while just admiring the view.
+              More in my <a href="curriculum_vitae.pdf"><b>CV</b></a>.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Research -->
     <section class="section">
-      <h2>Current research focus</h2>
-      <div class="card prose">
-        <p>
-          My main research looks at vision–language models, specifically how visual and textual tokens align across layers in the LLM component of the VLMs.
-          We observe that alignment happens late which may prevent visual tokens from using task-specific circuits in early layers in LLMs.
-          I am working on validating this and exploring a recurrent back-patching approach to inject late-layer visual representations into earlier layers.
-        </p>
+      <div class="section-head" onclick="toggleSection(this)">
+        <h2>Current Research Focus</h2>
+        <span class="toggle-btn">Hide</span>
+      </div>
 
-        <p>
-          I am working on personalization in VLMs where we are building a benchmark to evaluate VLMs if they have capabilities required to do personalization
-          such as a person's behavior, preferences, characteristics, habits and so on. Instead of treating personalization as a static, we treat it as temporal
-          which will keep changing across time.
-        </p>
+      <!-- open by default -->
+      <div class="section-content" style="max-height: 1200px;">
+        <div class="section-content-inner">
 
-        <p>
-          I am also collaborating with a master’s student on a Q-Former–based visual RAG architecture that compresses retrieved images into compact semantic tokens
-          for efficient grounding. With this approach, we want to extend in-context learning of VLMs as they suffer to utilize more than 1 example.
-        </p>
+          <div class="research-item">
+            <h3>Improving Visual Alignment in VLMs</h3>
+            <p>
+              I work on making vision–language models better at using visual information throughout the model (not only in late layers), so visual features actually influence reasoning and decisions.
+            </p>
+          </div>
+
+          <div class="research-item">
+            <h3>Temporal Personalization for “Jarvis”-style Assistants 🤖</h3>
+            <p>
+              I study how VLMs can learn user preferences and habits that evolve over time, enabling assistants that personalize naturally and stay up-to-date without being creepy.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
+<!-- Updates -->
+<section class="section">
+  <div class="section-head" onclick="toggleSection(this)">
+    <h2>Recent Updates</h2>
+    <span class="toggle-btn">Hide</span>
+  </div>
 
-    <section class="section">
-      <h2>Updates</h2>
-      <div class="card">
-        <ul class="updates">
-          <li><strong>Jan. 2026:</strong> Started validating late-layer alignment behavior and testing recurrent back-patching interventions.</li>
-          <li><strong>Nov. 2025:</strong> Drafted evaluation protocol for temporal personalization in VLMs (preferences/behavior/habits over time).</li>
-          <li><strong>Sep. 2025:</strong> Built an early prototype of Q-Former–based visual RAG compression for efficient grounding.</li>
-          <li><strong>Jul. 2025:</strong> Set up layerwise alignment analysis to track visual–text fusion across the LLM stack.</li>
-          <li><strong>May 2025:</strong> Consolidated papers/projects and refreshed the website structure for easier sharing.</li>
-        </ul>
+  <!-- open by default -->
+  <div class="section-content" style="max-height: 1000px;">
+    <div class="section-content-inner">
+      <!-- SCROLL BOX -->
+      <div class="updates-box">
+
+        <div class="update important">
+          <div class="update-date">Aug. 2025</div>
+          <div class="update-text">
+            Joined <b>Mohamed bin Zayed University of Artificial Intelligence</b> as a <b>PhD student</b>.
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update-date">Jul. 2025</div>
+          <div class="update-text">
+            Left <b>Microsoft India</b> after 6 years, grateful for the people, problems, and plenty of “ship-it” moments.
+          </div>
+        </div>
+
+        <div class="update highlight">
+          <div class="update-date">Apr. 2025</div>
+          <div class="update-text">
+            Our work on <b>SCULPT: Systematic Tuning of Long Prompts</b> got accepted to <b>ACL 2025</b>.
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update-date">Jul. 2019</div>
+          <div class="update-text">
+            Awarded the <b>Silver Medal</b> at <b>IIT Kanpur</b> for exceptional undergraduate research.
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update-date">Mar. 2019</div>
+          <div class="update-text">
+            Received <b>research grants</b> from <b>Microsoft Research</b> and the <b>Indian National Academy of Engineering</b>.
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update-date">Jan. 2019</div>
+          <div class="update-text">
+            Received a <b>Research Grant</b> from <b>Microsoft Research</b> for
+            <b>Adversarial Adaptation of Scene Graph Models for Understanding Civic Issues</b>.
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+    <!-- Publications -->
+<section class="section">
+  <div class="section-head" onclick="toggleSection(this)">
+    <h2>Publications</h2>
+    <span class="toggle-btn">Hide</span>
+  </div>
+
+  <!-- open by default -->
+  <div class="section-content" style="max-height: 9000px;">
+    <div class="section-content-inner">
+
+      <div class="pub-year">2025</div>
+
+      <div class="pub">
+        <img src="images/litmus++.png" alt="LITMUS++" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">LITMUS++: An Agentic System for Predictive Analysis of Low-Resource Languages Across Tasks and Models</div>
+          <div class="pub-authors">Avni Mital Kumar, Shanu Kumar, Sandipan Dandapat, Monojit Choudhury</div>
+          <div class="pub-venue">
+            <span class="venue-badge findings">AACL</span>
+            <span class="venue-meta">Demo</span>
+          </div>
+          <!-- No link provided in LaTeX for this one -->
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/sculpt.png" alt="SCULPT" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">SCULPT: Systematic Tuning of Long Prompts</div>
+          <div class="pub-authors">Shanu Kumar, Akhila Yesantarao Venkata, Shubhanshu Khandelwal, Bishal Santra, Parag Agrawal, Manish Gupta</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">ACL</span>
+            <span class="venue-meta">Main</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2410.20788" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/cultural_sensitivity.png" alt="Cultural Kaleidoscope" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Navigating the Cultural Kaleidoscope: A Hitchhiker’s Guide to Sensitivity in LLMs</div>
+          <div class="pub-authors">Somnath Banerjee, Sayan Layek, Hari Shrawgi, Rajarshi Mandal, Avik Halder, Shanu Kumar, et al.</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">NAACL</span>
+            <span class="venue-meta">Main</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2410.12880" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/safeinfer.png" alt="SafeInfer" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">SafeInfer: Context Adaptive Decoding Time Safety Alignment for LLMs</div>
+          <div class="pub-authors">Somnath Banerjee, Soham Tripathy, Sayan Layek, Shanu Kumar, Animesh Mukherjee, Rima Hazra</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">AAAI</span>
+            <span class="venue-meta">Conference</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2406.12274" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/uncertainty_cot.png" alt="Uncertainty-Guided CoT" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Enhancing Zero-shot CoT Prompting via Uncertainty-Guided Strategy Selection</div>
+          <div class="pub-authors">Shanu Kumar, Saish Mendke, Karody Lubna Abdul Rahman, Santosh Kurasa, Parag Agrawal, Sandipan Dandapat</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">COLING</span>
+            <span class="venue-meta">Oral</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2412.00353" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/moderation.png" alt="Socio-Culturally Aware Moderation" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Socio-Culturally Aware Evaluation Framework for LLM-Based Content Moderation</div>
+          <div class="pub-authors">Shanu Kumar, Gauri Kholkar, Saish Mendke, Anubhav Sadana, Parag Agrawal, Sandipan Dandapat</div>
+          <div class="pub-venue">
+            <span class="venue-badge workshop">SUMEval</span>
+            <span class="venue-meta">Workshop @ COLING</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2412.13578" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+              <div class="pub">
+        <img src="images/code_mixed.png" alt="Attributional Safety Failures" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Attributional Safety Failures in LLMs under Code-Mixed Perturbations</div>
+          <div class="pub-authors">Somnath Banerjee, Pratyush Chatterjee, Shanu Kumar, Sayan Layek, Parag Agrawal, Rima Hazra,  Animesh Mukherjee</div>
+          <div class="pub-venue">
+            <span class="venue-badge findings">arXiv</span>
+            <span class="venue-meta">Under review</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2505.14469" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/safer_pretraining.png" alt="Towards Safer Pretraining" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Towards Safer Pretraining: Analyzing and Filtering Harmful Content in Webscale datasets</div>
+          <div class="pub-authors">Sai Krishna Mendu, Harish Yenala, Aditi Gulati, Shanu Kumar, Parag Agrawal</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">IJCAI</span>
+            <span class="venue-meta">Main</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2505.02009" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-year">2023</div>
+
+      <div class="pub">
+        <img src="images/ditto.png" alt="DiTTO" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">DiTTO: A Feature Representation Imitation Approach for improving Cross-Lingual Transfer</div>
+          <div class="pub-authors">Shanu Kumar, Soujanya Abbaraju, Sunayana Sitaram, Sandipan Dandapat, Monojit Choudhury</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">EACL</span>
+            <span class="venue-meta">Main</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://aclanthology.org/2023.eacl-main.29.pdf" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pub">
+        <img src="images/read.png" alt="READ" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">READ: Reinforcement-based Adversarial Learning for Text Classification...</div>
+          <div class="pub-authors">Rohit Sharma*, Shanu Kumar*, Avinash Kumar</div>
+          <div class="pub-venue">
+            <span class="venue-badge findings">arXiv</span>
+            <span class="venue-meta">arXiv preprint</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2501.08035" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-year">2022</div>
+
+      <div class="pub">
+        <img src="images/diversity_uncertainty.png" alt="Diversity and Uncertainty in Moderation" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">“Diversity and Uncertainty in Moderation” are the Key to Data Selection...</div>
+          <div class="pub-authors">Shanu Kumar, Sandipan Dandapat, Monojit Choudhury</div>
+          <div class="pub-venue">
+            <span class="venue-badge findings">NAACL</span>
+            <span class="venue-meta">Findings</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://aclanthology.org/2022.findings-naacl.78.pdf" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/mtl_prediction.png" alt="MTL Zero-shot Performance Prediction" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Multi Task Learning For Zero Shot Performance Prediction of Multilingual Models</div>
+          <div class="pub-authors">Kabir Ahuja*, Shanu Kumar*, Sandipan Dandapat, Monojit Choudhury</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">ACL</span>
+            <span class="venue-meta">Oral</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://aclanthology.org/2022.acl-long.374" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-year">2019</div>
+        
+      <div class="pub">
+        <img src="images/mitigating.png" alt="Mitigating Uncertainty of Classifier" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Mitigating Uncertainty of Classifier for Unsupervised Domain Adaptation</div>
+          <div class="pub-authors">Shanu Kumar, Vinod Kumar Kurmi, Praphul Singh, Vinay P. Namboodiri</div>
+          <div class="pub-venue">
+            <span class="venue-badge findings">arXiv</span>
+            <span class="venue-meta">arXiv preprint</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2107.00727" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/cvpr_cada.png" alt="Attending to Discriminative Certainty" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Attending to Discriminative Certainty for Domain Adaptation</div>
+          <div class="pub-authors">Vinod Kumar Kurmi*, Shanu Kumar*, Vinay P. Namboodiri</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">CVPR</span>
+            <span class="venue-meta">Conference</span>
+          </div>
+          <div class="pub-links">
+            <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kurmi_Attending_to_Discriminative_Certainty_for_Domain_Adaptation_CVPR_2019_paper.pdf" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="images/www19.png" alt="Adversarial Adaptation of Scene Graph Models" class="pub-thumbnail"
+             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <div class="pub-content">
+          <div class="pub-title">Adversarial Adaptation of Scene Graph Models for Understanding Civic Issues</div>
+          <div class="pub-authors">Shanu Kumar, Shubham Atreja, Anjali Singh, Mohit Jain</div>
+          <div class="pub-venue">
+            <span class="venue-badge tier-top">WWW</span>
+            <span class="venue-meta">Conference</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://dl.acm.org/citation.cfm?id=3313681" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
   </main>
 
-  <div id="site-footer"></div>
-  <script src="assets/main.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">© 2026 Shanu Kumar</div>
+  </footer>
+
+  <script src="assets/site.js"></script>
 </body>
 </html>
