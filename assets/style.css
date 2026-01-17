@@ -569,16 +569,4 @@ body {
   position: relative;
 }
 
-.intro-header::before{
-  content:"";
-  position:absolute;
-  left: 290px;   /* tweak if needed */
-  top: 18px;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--copper);
-  opacity: 0.9;
-}
-
 
