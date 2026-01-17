@@ -29,30 +29,24 @@
         </a>
 
         <a href="https://scholar.google.com/citations?user=PR_Xi0EAAAAJ&hl=en"
-           class="icon-btn" title="Google Scholar" aria-label="Google Scholar"
-           target="_blank" rel="noopener">
+          class="icon-btn" title="Google Scholar" aria-label="Google Scholar"
+          target="_blank" rel="noopener">
           <i class="fa-solid fa-graduation-cap"></i>
         </a>
 
-        <a href="https://github.com/Sshanu"
-           class="icon-btn" title="GitHub" aria-label="GitHub"
-           target="_blank" rel="noopener">
+        <a href="https://github.com/Sshanu" class="icon-btn" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
           <i class="fa-brands fa-github"></i>
         </a>
 
-        <a href="https://www.linkedin.com/in/shanu-kumar"
-           class="icon-btn" title="LinkedIn" aria-label="LinkedIn"
-           target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/sshanu" class="icon-btn" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
           <i class="fa-brands fa-linkedin"></i>
         </a>
 
-        <a href="https://twitter.com/Sshanukr"
-           class="icon-btn" title="Twitter/X" aria-label="Twitter/X"
-           target="_blank" rel="noopener">
+        <a href="https://twitter.com/Sshanukr" class="icon-btn" title="Twitter/X" aria-label="Twitter/X" target="_blank" rel="noopener">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
 
-        <!-- FIXED: solid icon + requested path -->
+        <!-- CV as TEXT -->
         <a href="curriculum_vitae.pdf" class="cv-btn" title="CV" aria-label="CV">CV</a>
       </div>
     </div>
@@ -73,22 +67,26 @@
         <div class="intro-text">
           <h1>About Me</h1>
 
-          <!-- Intro / About Me -->
           <div class="bio">
-            <p>
-              I am a PhD student at <b>Mohamed bin Zayed University of Artificial Intelligence</b>. I am fortunate to be advised by
-              <a href="https://mbzuai.ac.ae/study/faculty/yova-kementchedjhieva/" target="_blank" rel="noopener"><b>Yova Kementchedjhieva</b></a>
-              and
-              <a href="https://mbzuai.ac.ae/study/faculty/kentaro-inui/" target="_blank" rel="noopener"><b>Kentaro Inui</b></a>.
-              My research focuses on personalization, alignment, spatial reasoning, and interpretability in <b>vision–language models</b>, with an emphasis on building systems that are reliable in real-world settings.
-            </p>
+            I am a PhD student at <b>Mohamed bin Zayed University of Artificial Intelligence</b>, advised by
+            <a href="https://mbzuai.ac.ae/study/faculty/yova-kementchedjhieva/" target="_blank" rel="noopener"><b>Prof. Yova Kementchedjhieva</b></a>
+            and
+            <a href="https://mbzuai.ac.ae/study/faculty/kentaro-inui/" target="_blank" rel="noopener"><b>Prof. Kentaro Inui</b></a>.
+            I work on vision–language models, with a focus on personalization, alignment, spatial reasoning, and interpretability.
+          </div>
 
-            <p>
-              Previously, I was a <b>Data &amp; Applied Scientist</b> at <b>Microsoft</b> (2019–2025), working on <b>multilingual NLP</b> and <b>safety-focused modeling</b> at scale.
-              I completed my <b>B.Tech.</b> in Electrical Engineering with a minor in Machine Learning at <b>IIT Kanpur</b>, where I was awarded the <b>Silver Medal</b>.
-              Outside research, I’m usually trekking or doing photography, occasionally pretending I’m “collecting data” while just admiring the view.
-              More in my <a href="curriculum_vitae.pdf"><b>CV</b></a>.
-            </p>
+          <div class="bio">
+            Previously, I was a Data &amp; Applied Scientist at <b>Microsoft</b> (2019–2025). I worked closely with
+            <a href="https://mbzuai.ac.ae/study/faculty/monojit-choudhury/" target="_blank" rel="noopener"><b>Prof. Monojit Choudhury</b></a>
+            and
+            <a href="https://people.iith.ac.in/sdandapat/index.html" target="_blank" rel="noopener"><b>Prof. Sandipan Dandapat</b></a>
+            on multilingual NLP, building and evaluating models that don’t panic when the input switches languages mid-sentence.
+            I also collaborated with
+            <a href="https://www.microsoft.com/en-us/research/people/gmanish/" target="_blank" rel="noopener"><b>Manish Gupta</b></a>
+            on scaling prompt optimization for industry scale prompts.
+            I completed my <b>B.Tech.</b> in Electrical Engineering at <b>IIT Kanpur</b>, where I was awarded the <b>Silver Medal</b>.
+            Outside research, I’m usually trekking or doing photography, occasionally claiming I am collecting data while mostly just admiring the view.
+            More in my <a href="curriculum_vitae.pdf"><b>CV</b></a>.
           </div>
         </div>
       </div>
@@ -101,27 +99,27 @@
         <span class="toggle-btn">Hide</span>
       </div>
 
-      <!-- open by default -->
       <div class="section-content" style="max-height: 1200px;">
         <div class="section-content-inner">
-
           <div class="research-item">
-            <h3>Improving Visual Alignment in VLMs</h3>
+            <h3>Improving Visual Alignment in Vision–Language Models</h3>
             <p>
-              I work on making vision–language models better at using visual information throughout the model (not only in late layers), so visual features actually influence reasoning and decisions.
+              I am working on making VLMs align visual and textual representations more <b>reliably</b> and <b>earlier</b> in the network,
+              so vision can actually influence reasoning instead of arriving “late to the party”.
             </p>
           </div>
 
           <div class="research-item">
-            <h3>Temporal Personalization for “Jarvis”-style Assistants 🤖</h3>
+            <h3>Temporal Personalization (usable for Jarvis)</h3>
             <p>
-              I study how VLMs can learn user preferences and habits that evolve over time, enabling assistants that personalize naturally and stay up-to-date without being creepy.
+              I am exploring <b>temporal personalization</b>: modeling preferences and context that change over time,
+              so assistants can be helpful in a way that feels <i>natural</i> (and not creepy).
             </p>
           </div>
-
         </div>
       </div>
     </section>
+
 <!-- Updates -->
 <section class="section">
   <div class="section-head" onclick="toggleSection(this)">
@@ -250,7 +248,7 @@
           <div class="pub-authors">Somnath Banerjee, Soham Tripathy, Sayan Layek, Shanu Kumar, Animesh Mukherjee, Rima Hazra</div>
           <div class="pub-venue">
             <span class="venue-badge tier-top">AAAI</span>
-            <span class="venue-meta">Conference</span>
+            <span class="venue-meta">AI Alignment Track</span>
           </div>
           <div class="pub-links">
             <a href="https://arxiv.org/abs/2406.12274" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
@@ -281,8 +279,8 @@
           <div class="pub-title">Socio-Culturally Aware Evaluation Framework for LLM-Based Content Moderation</div>
           <div class="pub-authors">Shanu Kumar, Gauri Kholkar, Saish Mendke, Anubhav Sadana, Parag Agrawal, Sandipan Dandapat</div>
           <div class="pub-venue">
-            <span class="venue-badge workshop">SUMEval</span>
-            <span class="venue-meta">Workshop @ COLING</span>
+            <span class="venue-badge workshop">COLING</span>
+            <span class="venue-meta">SUMEval Workshop</span>
           </div>
           <div class="pub-links">
             <a href="https://arxiv.org/abs/2412.13578" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
@@ -349,7 +347,7 @@
           <div class="pub-authors">Rohit Sharma*, Shanu Kumar*, Avinash Kumar</div>
           <div class="pub-venue">
             <span class="venue-badge findings">arXiv</span>
-            <span class="venue-meta">arXiv preprint</span>
+            <span class="venue-meta">Preprint</span>
           </div>
           <div class="pub-links">
             <a href="https://arxiv.org/abs/2501.08035" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
@@ -401,7 +399,7 @@
           <div class="pub-authors">Shanu Kumar, Vinod Kumar Kurmi, Praphul Singh, Vinay P. Namboodiri</div>
           <div class="pub-venue">
             <span class="venue-badge findings">arXiv</span>
-            <span class="venue-meta">arXiv preprint</span>
+            <span class="venue-meta">Preprint</span>
           </div>
           <div class="pub-links">
             <a href="https://arxiv.org/abs/2107.00727" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
@@ -417,7 +415,7 @@
           <div class="pub-authors">Vinod Kumar Kurmi*, Shanu Kumar*, Vinay P. Namboodiri</div>
           <div class="pub-venue">
             <span class="venue-badge tier-top">CVPR</span>
-            <span class="venue-meta">Conference</span>
+            <span class="venue-meta">Poster</span>
           </div>
           <div class="pub-links">
             <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kurmi_Attending_to_Discriminative_Certainty_for_Domain_Adaptation_CVPR_2019_paper.pdf" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
@@ -433,7 +431,7 @@
           <div class="pub-authors">Shanu Kumar, Shubham Atreja, Anjali Singh, Mohit Jain</div>
           <div class="pub-venue">
             <span class="venue-badge tier-top">WWW</span>
-            <span class="venue-meta">Conference</span>
+            <span class="venue-meta">Short</span>
           </div>
           <div class="pub-links">
             <a href="https://dl.acm.org/citation.cfm?id=3313681" class="pub-link" target="_blank" rel="noopener">[Paper]</a>
