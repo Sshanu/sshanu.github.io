@@ -203,15 +203,21 @@ body {
 /* Section */
 .section { margin-bottom: 56px; }
 
-.section-head {
+.section-head{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 12px;
-  border-bottom: 2px solid rgba(0,0,0,0.85);
+
+  padding-bottom: 14px;
   margin-bottom: 24px;
+
   cursor: pointer;
   user-select: none;
+
+  position: relative;
+
+  /* COPPER LINE (always visible) */
+  border-bottom: 4px solid var(--u-copper-2, #b8744d) !important;
 }
 
 .section-head h2 {
