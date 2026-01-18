@@ -160,8 +160,9 @@ body {
 }
 
 .profile-img {
-  width: 300px;
-  height: 500px;
+  margin-top: 30px;  /* try 8–20px */
+  width: 310px;
+  height: 600px;
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
