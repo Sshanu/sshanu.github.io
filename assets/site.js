@@ -114,3 +114,40 @@ function applyVenueColors() {
     if (cls) b.classList.add(cls);
   });
 }
+
+// ===== Publication thumbnail lightbox =====
+(function () {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  if (!lightbox || !lightboxImg) return;
+
+  // Open on click (event delegation)
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a.pub-thumb-link");
+    if (!a) return;
+
+    e.preventDefault();
+    const src = a.getAttribute("href");
+    if (!src) return;
+
+    lightboxImg.src = src;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  });
+
+  // Close when clicking anywhere on overlay
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+    document.body.style.overflow = ""; // restore scroll
+  });
+
+  // Close on ESC (nice-to-have)
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (!lightbox.classList.contains("is-open")) return;
+    lightbox.click();
+  });
+})();

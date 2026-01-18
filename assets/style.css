@@ -570,3 +570,65 @@ body {
 }
 
 
+
+.pub-thumb-link{
+  display: inline-block;
+  border-radius: 10px; /* match thumbnail */
+  overflow: hidden;
+}
+
+.pub-thumb-link img{
+  display: block;
+  transition: transform 0.18s ease, filter 0.18s ease;
+  cursor: zoom-in;
+}
+
+.pub-thumb-link:hover img{
+  transform: scale(1.02);
+  filter: saturate(1.05);
+}
+
+/* Paper links in copper */
+.pub-link{
+  color: var(--copper-500);
+}
+
+.pub-link:hover{
+  color: var(--copper-700);
+}
+
+/* ===== Lightbox (click-to-close) ===== */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;              /* hidden by default */
+  place-items: center;
+  background: rgba(0,0,0,0.82);
+  z-index: 9999;
+  padding: 22px;
+  cursor: zoom-out;
+}
+
+.lightbox.is-open{
+  display: grid;
+}
+
+.lightbox img{
+  max-width: min(1100px, 92vw);
+  max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+  background: #fff;
+}
+
+/* Thumbnail link: no underline/border */
+.pub-thumb-link{
+  display: inline-block;
+  border-radius: 10px; /* match your thumbnail */
+  overflow: hidden;
+}
+.pub-thumb-link:hover img{
+  transform: scale(1.02);
+  transition: transform 0.18s ease;
+  cursor: zoom-in;
+}

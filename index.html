@@ -13,7 +13,10 @@
 
   <link rel="stylesheet" href="assets/style.css">
 </head>
-
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <img id="lightbox-img" alt="">
+</div>
 <body>
   <!-- Header -->
   <header class="header">
@@ -68,7 +71,7 @@
           <h1>About Me</h1>
 
           <div class="bio">
-            I am a PhD student at <span class="copper">MBZUAI</span>, advised by
+            I am a first year PhD student at <span class="copper">MBZUAI</span>, advised by
             <a href="https://mbzuai.ac.ae/study/faculty/yova-kementchedjhieva/" target="_blank" rel="noopener"><b>Prof. Yova Kementchedjhieva</b></a>
             and
             <a href="https://mbzuai.ac.ae/study/faculty/kentaro-inui/" target="_blank" rel="noopener"><b>Prof. Kentaro Inui</b></a>.
@@ -195,8 +198,10 @@
       <div class="pub-year">2025</div>
 
       <div class="pub">
-        <img src="images/litmus++.png" alt="LITMUS++" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/litmus++.png" class="pub-thumb-link">
+          <img src="images/litmus++.png" alt="LITMUS++" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">LITMUS++: An Agentic System for Predictive Analysis of Low-Resource Languages Across Tasks and Models</div>
           <div class="pub-authors">Avni Mital Kumar, Shanu Kumar, Sandipan Dandapat, Monojit Choudhury</div>
@@ -204,13 +209,14 @@
             <span class="venue-badge findings">AACL</span>
             <span class="venue-meta">Demo</span>
           </div>
-          <!-- No link provided in LaTeX for this one -->
         </div>
       </div>
 
       <div class="pub">
-        <img src="images/sculpt.png" alt="SCULPT" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/sculpt.png" class="pub-thumb-link">
+          <img src="images/sculpt.png" alt="SCULPT" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">SCULPT: Systematic Tuning of Long Prompts</div>
           <div class="pub-authors">Shanu Kumar, Akhila Yesantarao Venkata, Shubhanshu Khandelwal, Bishal Santra, Parag Agrawal, Manish Gupta</div>
@@ -225,8 +231,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/cultural_sensitivity.png" alt="Cultural Kaleidoscope" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/cultural_sensitivity.png" class="pub-thumb-link">
+          <img src="images/cultural_sensitivity.png" alt="Cultural Kaleidoscope" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Navigating the Cultural Kaleidoscope: A Hitchhiker’s Guide to Sensitivity in LLMs</div>
           <div class="pub-authors">Somnath Banerjee, Sayan Layek, Hari Shrawgi, Rajarshi Mandal, Avik Halder, Shanu Kumar, et al.</div>
@@ -241,8 +249,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/safeinfer.png" alt="SafeInfer" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/safeinfer.png" class="pub-thumb-link">
+          <img src="images/safeinfer.png" alt="SafeInfer" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">SafeInfer: Context Adaptive Decoding Time Safety Alignment for LLMs</div>
           <div class="pub-authors">Somnath Banerjee, Soham Tripathy, Sayan Layek, Shanu Kumar, Animesh Mukherjee, Rima Hazra</div>
@@ -257,8 +267,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/uncertainty_cot.png" alt="Uncertainty-Guided CoT" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/uncertainty_cot.png" class="pub-thumb-link">
+          <img src="images/uncertainty_cot.png" alt="Uncertainty-Guided CoT" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Enhancing Zero-shot CoT Prompting via Uncertainty-Guided Strategy Selection</div>
           <div class="pub-authors">Shanu Kumar, Saish Mendke, Karody Lubna Abdul Rahman, Santosh Kurasa, Parag Agrawal, Sandipan Dandapat</div>
@@ -273,8 +285,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/moderation.png" alt="Socio-Culturally Aware Moderation" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/moderation.png" class="pub-thumb-link">
+          <img src="images/moderation.png" alt="Socio-Culturally Aware Moderation" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Socio-Culturally Aware Evaluation Framework for LLM-Based Content Moderation</div>
           <div class="pub-authors">Shanu Kumar, Gauri Kholkar, Saish Mendke, Anubhav Sadana, Parag Agrawal, Sandipan Dandapat</div>
@@ -288,12 +302,14 @@
         </div>
       </div>
 
-              <div class="pub">
-        <img src="images/code_mixed.png" alt="Attributional Safety Failures" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+      <div class="pub">
+        <a href="images/code_mixed.png" class="pub-thumb-link">
+          <img src="images/code_mixed.png" alt="Attributional Safety Failures" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Attributional Safety Failures in LLMs under Code-Mixed Perturbations</div>
-          <div class="pub-authors">Somnath Banerjee, Pratyush Chatterjee, Shanu Kumar, Sayan Layek, Parag Agrawal, Rima Hazra,  Animesh Mukherjee</div>
+          <div class="pub-authors">Somnath Banerjee, Pratyush Chatterjee, Shanu Kumar, Sayan Layek, Parag Agrawal, Rima Hazra, Animesh Mukherjee</div>
           <div class="pub-venue">
             <span class="venue-badge findings">arXiv</span>
             <span class="venue-meta">Under review</span>
@@ -305,8 +321,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/safer_pretraining.png" alt="Towards Safer Pretraining" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/safer_pretraining.png" class="pub-thumb-link">
+          <img src="images/safer_pretraining.png" alt="Towards Safer Pretraining" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Towards Safer Pretraining: Analyzing and Filtering Harmful Content in Webscale datasets</div>
           <div class="pub-authors">Sai Krishna Mendu, Harish Yenala, Aditi Gulati, Shanu Kumar, Parag Agrawal</div>
@@ -323,8 +341,10 @@
       <div class="pub-year">2023</div>
 
       <div class="pub">
-        <img src="images/ditto.png" alt="DiTTO" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/ditto.png" class="pub-thumb-link">
+          <img src="images/ditto.png" alt="DiTTO" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">DiTTO: A Feature Representation Imitation Approach for improving Cross-Lingual Transfer</div>
           <div class="pub-authors">Shanu Kumar, Soujanya Abbaraju, Sunayana Sitaram, Sandipan Dandapat, Monojit Choudhury</div>
@@ -338,10 +358,11 @@
         </div>
       </div>
 
-
       <div class="pub">
-        <img src="images/read.png" alt="READ" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/read.png" class="pub-thumb-link">
+          <img src="images/read.png" alt="READ" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">READ: Reinforcement-based Adversarial Learning for Text Classification...</div>
           <div class="pub-authors">Rohit Sharma*, Shanu Kumar*, Avinash Kumar</div>
@@ -358,8 +379,10 @@
       <div class="pub-year">2022</div>
 
       <div class="pub">
-        <img src="images/diversity_uncertainty.png" alt="Diversity and Uncertainty in Moderation" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/diversity_uncertainty.png" class="pub-thumb-link">
+          <img src="images/diversity_uncertainty.png" alt="Diversity and Uncertainty in Moderation" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">“Diversity and Uncertainty in Moderation” are the Key to Data Selection...</div>
           <div class="pub-authors">Shanu Kumar, Sandipan Dandapat, Monojit Choudhury</div>
@@ -374,8 +397,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/mtl_prediction.png" alt="MTL Zero-shot Performance Prediction" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/mtl_prediction.png" class="pub-thumb-link">
+          <img src="images/mtl_prediction.png" alt="MTL Zero-shot Performance Prediction" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Multi Task Learning For Zero Shot Performance Prediction of Multilingual Models</div>
           <div class="pub-authors">Kabir Ahuja*, Shanu Kumar*, Sandipan Dandapat, Monojit Choudhury</div>
@@ -390,10 +415,12 @@
       </div>
 
       <div class="pub-year">2019</div>
-        
+
       <div class="pub">
-        <img src="images/mitigating.png" alt="Mitigating Uncertainty of Classifier" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/mitigating.png" class="pub-thumb-link">
+          <img src="images/mitigating.png" alt="Mitigating Uncertainty of Classifier" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Mitigating Uncertainty of Classifier for Unsupervised Domain Adaptation</div>
           <div class="pub-authors">Shanu Kumar, Vinod Kumar Kurmi, Praphul Singh, Vinay P. Namboodiri</div>
@@ -408,8 +435,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/cvpr_cada.png" alt="Attending to Discriminative Certainty" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/cvpr_cada.png" class="pub-thumb-link">
+          <img src="images/cvpr_cada.png" alt="Attending to Discriminative Certainty" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Attending to Discriminative Certainty for Domain Adaptation</div>
           <div class="pub-authors">Vinod Kumar Kurmi*, Shanu Kumar*, Vinay P. Namboodiri</div>
@@ -424,8 +453,10 @@
       </div>
 
       <div class="pub">
-        <img src="images/www19.png" alt="Adversarial Adaptation of Scene Graph Models" class="pub-thumbnail"
-             onerror="this.onerror=null;this.src='images/paper_default.png';">
+        <a href="images/www19.png" class="pub-thumb-link">
+          <img src="images/www19.png" alt="Adversarial Adaptation of Scene Graph Models" class="pub-thumbnail"
+               onerror="this.onerror=null;this.src='images/paper_default.png';">
+        </a>
         <div class="pub-content">
           <div class="pub-title">Adversarial Adaptation of Scene Graph Models for Understanding Civic Issues</div>
           <div class="pub-authors">Shanu Kumar, Shubham Atreja, Anjali Singh, Mohit Jain</div>
@@ -438,8 +469,6 @@
           </div>
         </div>
       </div>
-
-
 
     </div>
   </div>
